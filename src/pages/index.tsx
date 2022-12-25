@@ -1,9 +1,9 @@
-
+import { Heading } from '@ignite-ui/react'
 
 export default function Home() {
   return (
     <>
-      <h1>Boa Brunão !</h1>
+      <Heading>Boa Brunão !</Heading>
     </>
   )
 }
