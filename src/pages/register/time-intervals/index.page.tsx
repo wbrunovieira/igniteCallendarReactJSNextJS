@@ -10,6 +10,7 @@ import {
 } from '@ignite-ui/react'
 import { ArrowRight } from 'phosphor-react'
 import { Container, Header } from '../styles'
+import { useRouter } from 'next/router'
 
 import {
   IntervalBox,
@@ -88,6 +89,7 @@ export default function TimeIntervals() {
   })
 
   const weekDays = getWeekDays()
+  const router = useRouter()
 
   const { fields } = useFieldArray({
     control,
@@ -102,6 +104,8 @@ export default function TimeIntervals() {
     await api.post('/users/time-intervals', {
       intervals,
     })
+
+    await router.push('/register/update-profile')
   }
   return (
     <Container>
