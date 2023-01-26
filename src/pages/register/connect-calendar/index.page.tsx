@@ -57,10 +57,6 @@ export default function ConnectCalendar() {
             )}
           </ConnectItem>
 
-          <pre>
-            <Text>{JSON.stringify(session)}</Text>
-          </pre>
-
           {hasAuthError && (
             <AuthError size="sm">
               Falha ao se conectar ao Google, verifique se você habilitou as
